@@ -6,7 +6,7 @@
 
 The purpose of the project is to develop a digital device that can measure the angle of inclination of a plane relative to the plane of flat level ground. The device is intended to be attached to the back of the head of a hospital bed so that it measures the head of bed (HOB) angle and therefore the inclination of the patient's torso as it rests against the HOB.
 
-The device outputs a continuous signal that is proportional to the HOB angle for inpatients with abnormal intercranial pressure (ICP). The angle of the patient's torso can provide important context to the measurement of ICP but, at the moment, NHS practice is to record this manually (NHS, 2019), which places a burden on nursing staff. The inclinometer signal can be coupled into ICP recording equipment and so automates the task carried out by staff.
+The device outputs a continuous signal that is proportional to the HOB angle for inpatients with abnormal intracranial pressure (ICP). The angle of the patient's torso can provide important context to the measurement of ICP but, at the moment, NHS practice is to record this manually (NHS, 2019), which places a burden on nursing staff. The inclinometer signal can be coupled into ICP recording equipment and so automates the task carried out by staff.
 
 The central part of the device hardware is a [Freedom KL03Z development board](https://www.nxp.com/design/development-boards/freedom-development-boards/mcu-boards/freedom-development-platform-for-kinetis-kl03-mcus:FRDM-KL03Z). This features an on board accelerometer part MMA8451Q, which is used for sensing the projection of the gravity vector on to the accelerometer axes. The measured co-ordinates of this projection are used to compute tilt angle. (Analog Devices, 2010)
 
