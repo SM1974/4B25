@@ -1,4 +1,4 @@
-# 4B25: 'A low-cost head-of-bed inclinometer'
+# 4B25 cw5: 'A low-cost head-of-bed inclinometer'
 
 #### Steve Mead, Darwin College, sfm36
 
