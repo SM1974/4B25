@@ -10,7 +10,7 @@ The device outputs a continuous signal that is proportional to the HOB angle for
 
 The central part of the device hardware is a [Freedom KL03Z development board](https://www.nxp.com/design/development-boards/freedom-development-boards/mcu-boards/freedom-development-platform-for-kinetis-kl03-mcus:FRDM-KL03Z). This features an on board accelerometer part MMA8451Q, which is used for sensing the projection of the gravity vector on to the accelerometer axes. The measured co-ordinates of this projection are used to compute tilt angle. (Analog Devices, 2010)
 
-There are two other peripherals: 
+The design includes two other peripherals: 
 1. A 12-bit DAC part MCP4725 that provides the device voltage output with a gain of 25mV per degree of tilt.
 2. A 96x64 RGB OLED driven by a SSD1331 chip that displays the angle of HOB inclination.
 
@@ -61,7 +61,7 @@ Booting Warp, in 3... 2... 1...
 ```
 ## References
 
-Analog Devices, 2010. 'Using an Accelerometer for Inclination Sensing Application Note'. AN-1057
+Analog Devices, 2010. 'Using an Accelerometer for Inclination Sensing'. Application Note. AN-1057
 https://www.analog.com/media/en/technical-documentation/application-notes/AN-1057.pdf (Accessed 2 December 2019)
 
 NHS, 2019. 'Intracranial pressure (ICP) monitoring at GOSH'. https://www.gosh.nhs.uk/conditions-and-treatments/procedures-and-treatments/intracranial-pressure-icp-monitoring (Accessed 14 November 2019)
