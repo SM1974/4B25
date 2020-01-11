@@ -6,7 +6,7 @@
 
 The purpose of the project is to develop a digital device that can measure the angle of inclination of a plane relative to the plane of flat level ground. The device is intended to be attached to the back of the head of a hospital bed so that it measures the head of bed (HOB) angle and therefore the inclination of the patient's torso as it rests against the HOB.
 
-The device outputs a continuous signal that is proportional to the HOB angle for inpatients with abnormal intercranial pressure (ICP). The angle of the patient's torso can provide important context to the measurement of ICP but, at the moment, standard practice is to record this manually, which places a burden on nursing staff. The inclinometer signal can be coupled into ICP recording equipment and so automates the task carried out by staff.
+The device outputs a continuous signal that is proportional to the HOB angle for inpatients with abnormal intercranial pressure (ICP). The angle of the patient's torso can provide important context to the measurement of ICP but, at the moment, NHS practice is to record this manually (NHS, 2019), which places a burden on nursing staff. The inclinometer signal can be coupled into ICP recording equipment and so automates the task carried out by staff.
 
 The central part of the device hardware is a [Freedom KL03Z development board](https://www.nxp.com/design/development-boards/freedom-development-boards/mcu-boards/freedom-development-platform-for-kinetis-kl03-mcus:FRDM-KL03Z). This features an on board accelerometer part MMA8451Q, which is used for sensing the projection of the gravity vector on to the accelerometer axes. The measured co-ordinates of this projection are used to compute tilt angle. (Analog Devices, 2010)
 
@@ -20,7 +20,7 @@ The firmware is a fork of Warp-Firmware, which is located at https://github.com/
 
 A number of software tools are required to create the KL03Z binary file. First, clone a forked repository of Warp-Firmware to a local p.c. running Ubuntu 16.04. Second, install the [ARM cross compiler](https://developer.arm.com/tools-and-software/open-source-software/developer-tools/gnu-toolchain/gnu-rm/downloads) and [CMake](https://cmake.org/download/) on this p.c. using the method described in Appendix C of the [4B25 course handbook](http://physcomp.eng.cam.ac.uk/4B25-course-notes-and-cover-trimmed-v0.3/4B25-course-notes-and-cover-trimmed-with-embedded-fonts.html). Third, install [J-Link Software for Linux](https://www.segger.com/downloads/jlink/#J-LinkSoftwareAndDocumentationPack) on the local p.c.
 
-J-Link is used to load the compiled binaries to the KL03Z board. A debug adapter (OpenSDA) is built into the KL03Z board. The J-Link openSDA image file should be written to the KL03Z board using the instructions [here](https://www.segger.com/products/debug-probes/j-link/models/other-j-links/opensda-sda-v2/).
+J-Link is used to load the compiled binaries to the microcontroller's flash memory. A debug adapter (OpenSDA) is built into the KL03Z board. The J-Link openSDA image file should be written to the KL03Z board using the instructions [here](https://www.segger.com/products/debug-probes/j-link/models/other-j-links/opensda-sda-v2/).
 
 On the local p.c., navigate to the Warp-firmware folder `Warp-firmware/src/boot/ksdk1.1.0` and overwrite the existing files with the following files supplied by sfm36:
 ```
@@ -61,5 +61,7 @@ Booting Warp, in 3... 2... 1...
 ```
 ## References
 
-(Analog Devices, 2010). 'Using an Accelerometer for Inclination Sensing Application Note'. AN-1057
+Analog Devices, 2010. 'Using an Accelerometer for Inclination Sensing Application Note'. AN-1057
 https://www.analog.com/media/en/technical-documentation/application-notes/AN-1057.pdf (Accessed 2 December 2019)
+
+NHS, 2019. 'Intracranial pressure (ICP) monitoring at GOSH'. https://www.gosh.nhs.uk/conditions-and-treatments/procedures-and-treatments/intracranial-pressure-icp-monitoring (Accessed 14 November 2019)
